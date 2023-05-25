@@ -5,10 +5,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- link untuk loading bootstrap dan icon dari font-awesome -->
+        <!-- link cdn untuk loading bootstrap dan icon dari font-awesome -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <title>Assigment 3</title>
+        <title>COVID-19</title>
     </head>
     <!-- bagian body, background dari bootstrap untuk bg-warning = warna kuning -->
     <body class="bg-warning">
@@ -23,12 +23,15 @@
                             <h1>COVID-19 TRACKER</h1>
                         </div>
                     </div>
-                    <!-- search bar & button -->
+                    <!-- select box -->
                     <div class="row">
+                        <div class="col-auto text-center pt-2 mt-2 fs-5 fw-bold">Select Country</div>
                         <div class="col text-center">
                             <div class="input-group input-group-md mt-3">
-                                <input type="text" class="form-control" id="input" placeholder="search" aria-label="get-data" aria-describedby="button">
-                                <button class="btn btn-secondary" type="button" id="button" onclick="getdata()">Get Data</button>
+                                <!-- ketika dilik akan menjalankan fungsi getdata() -->
+                                <select id="selectCountry" class="form-select" onchange="getdata()">
+                                    <option value="indonesia">Indonesia</option>
+                                </select>
                             </div>
                         </div>
                     </div>
